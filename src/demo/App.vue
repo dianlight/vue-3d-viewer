@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-navigation-drawer
+    <v-navigation-drawer app
       temporary
       data-e2e="menu"
       v-model="drawer"
@@ -186,12 +186,19 @@
     </v-btn>
 
     <v-snackbar :value="true" timeout="-1">
+      <!-- 
+        NOTE: Not yet supported in Vuetify 3.0.0-alpha.3
       <v-file-input
         :accept="accepts"
         @change="upload"
         data-e2e="file-input"
         label="File"
-      />
+      /-->
+      <input type='file' :accept="accepts"
+      class="v-file-input"
+        @change="upload"
+        data-e2e="file-input"
+        label="File" />
     </v-snackbar>
 
     <three-d-viewer

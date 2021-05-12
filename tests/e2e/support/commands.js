@@ -24,6 +24,7 @@
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
+/*
 Cypress.Commands.add('upload', (name, data, mime, selector) =>
 {
   cy.get(selector).closest('.v-file-input').then(element =>
@@ -41,3 +42,4 @@ Cypress.Commands.add('upload', (name, data, mime, selector) =>
       });
     });
 });
+*/
