@@ -1,5 +1,9 @@
 <template>
-  <v-app>
+<div>
+<Sidebar :visible="drawer" :baseZIndex="1000">
+            <h3>Left Sidebar</h3>
+</Sidebar>  
+<!--
     <v-navigation-drawer app
       temporary
       data-e2e="menu"
@@ -161,7 +165,8 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-
+-->
+<!--
     <v-dialog persistent v-model="progress.visible">
       <v-card>
         <v-card-title class="headline">Progress</v-card-title>
@@ -175,7 +180,10 @@
         </v-card-text>
       </v-card>
     </v-dialog>
+-->
 
+ <Button icon="pi pi-th-large" @click="drawer = !drawer"  />
+<!--
     <v-btn
       icon
       class="menu-icon"
@@ -184,23 +192,17 @@
     >
       <v-icon>mdi-menu</v-icon>
     </v-btn>
-
+-->
+<!--
     <v-snackbar :value="true" timeout="-1">
-      <!-- 
-        NOTE: Not yet supported in Vuetify 3.0.0-alpha.3
-      <v-file-input
-        :accept="accepts"
-        @change="upload"
-        data-e2e="file-input"
-        label="File"
-      /-->
       <input type='file' :accept="accepts"
       class="v-file-input"
         @change="upload"
         data-e2e="file-input"
         label="File" />
     </v-snackbar>
-
+-->
+<!--
     <three-d-viewer
       :extension="viewer.extension"
       :file="viewer.file"
@@ -214,13 +216,14 @@
       class="emulate-root"
       data-e2e="three-d-viewer"
     />
-  </v-app>
+-->    
+</div>    
 </template>
 
 <script>
 //Imports
-import colorPicker from './color-picker';
-import slider from './slider.vue';
+//import colorPicker from './color-picker';
+//import slider from './slider.vue';
 import {FileFormats} from 'unified-3d-loader';
 
 //Compute accepted extensions and mime types
@@ -265,8 +268,8 @@ export default {
     }
   }),
   components: {
-    'color-picker': colorPicker,
-    slider
+//    'color-picker': colorPicker,
+//    slider
   },
   methods: {
     done()

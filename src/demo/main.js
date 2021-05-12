@@ -2,31 +2,20 @@
 import App from './App.vue';
 import Viewer from '../main.js';
 import { createApp } from 'vue';
-import { createVuetify } from 'vuetify';
-import * as components from 'vuetify/lib/components';
-import * as directives from 'vuetify/lib/directives';
-import { aliases, mdi } from 'vuetify/lib/iconsets/mdi';
-import 'vuetify/dist/vuetify.css';
-import '@mdi/font/css/materialdesignicons.min.css';
+import PrimeVue from 'primevue/config';
+import Sidebar from 'primevue/sidebar';
+
+import 'primevue/resources/themes/saga-blue/theme.css';
+import 'primevue/resources/primevue.min.css';
+import 'primeicons/primeicons.css';
+import 'primeflex/primeflex.css';
 
 
 const app = createApp(App);
 //Vue plugins
 app.use(Viewer);
-app.use(createVuetify({
-    components,
-    directives,
-    theme: {
-        dark: true
-    },
-    icons: {
-        defaultSet: 'mdi',
-        aliases,
-        sets: {
-            mdi
-        }
-    }
-}));
+app.use(PrimeVue);
+app.component(Sidebar);
 
 app.mount('#app');
 

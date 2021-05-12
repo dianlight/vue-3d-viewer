@@ -8,8 +8,7 @@
 A Vue 3D file viewer via Three.JS and [Unified 3D Loader](https://github.com/Cloud-CNC/unified-3d-loader)
 
 ## Repository Note
-This is an attempt to porting to Vue 3 and Vuetify 3. 
-* 05/12/2021 - Lock. Vuetify 3.0.0.alpha.3 missing too many components. Wait for next release.
+This is an attempt to porting to Vue 3 and PrimeVue 3. 
 
 ## Features
 * Offloads parsing to a worker thread

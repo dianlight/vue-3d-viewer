@@ -1,77 +1,79 @@
 {
-  "name": "vue-3d-viewer",
-  "version": "1.0.7",
-  "description": "A Vue 3D file viewer via Three.JS and Unified 3D Loader",
-  "author": "Cloud CNC",
-  "scripts": {
-    "build": "vue-cli-service build --target lib --name vue-3d-viewer src/main.js",
-    "coverage": "npm run test:e2e:cli && nyc report --reporter-lcov",
-    "lint": "vue-cli-service lint",
-    "serve": "vue-cli-service serve src/demo/main.js",
-    "test:e2e": "vue-cli-service test:e2e --url http://localhost:8080",
-    "test:e2e:cli": "concurrently --kill-others --success first \"npm:serve\" \"wait-on http-get://localhost:8080 && npm run test:e2e -- --headless\"",
-    "test:e2e:gui": "concurrently --kill-others --success first \"npm:serve\" \"wait-on http-get://localhost:8080 && npm run test:e2e\""
-  },
-  "main": "dist/vue-3d-viewer.common.js",
-  "files": [
-    "dist/*",
-    "src/*"
-  ],
-  "dependencies": {
-    "core-js": "^3.12.1",
-    "observable-fns": "^0.5.1",
-    "threads": "^1.6.4",
-    "three": "^0.128.0",
-    "unified-3d-loader": "^1.1.4",
-    "vue": "^3.0.11"
-  },
-  "devDependencies": {
-    "@babel/preset-env": "^7.14.1",
-    "@cypress/code-coverage": "^3.9.5",
-    "@mdi/font": "^5.9.55",
-    "@vue/cli-plugin-babel": "^4.5.13",
-    "@vue/cli-plugin-e2e-cypress": "^4.5.13",
-    "@vue/cli-plugin-eslint": "^4.5.13",
-    "@vue/cli-service": "^4.5.13",
-    "@vue/compiler-sfc": "^3.0.11",
-    "@vue/test-utils": "^2.0.0-rc.6",
-    "babel-eslint": "^10.1.0",
-    "babel-plugin-istanbul": "^6.0.0",
-    "chai": "^4.3.4",
-    "concurrently": "^6.1.0",
-    "cypress": "^7.3.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2",
-    "nyc": "^15.1.0",
-    "postcss": "^8.2.15",
-    "raw-loader": "^4.0.2",
-    "sass": "^1.32.12",
-    "sass-loader": "^10.1.1",
-    "threads-webpack-plugin": "^1.0.8",
-    "vue-cli-plugin-vuetify": "^2.4.0",
-    "vue-template-compiler": "^2.6.12",
-    "vuetify": "^3.0.0-alpha.3",
-    "wait-on": "^5.3.0",
-    "webpack": "^4.44.2"
-  },
-  "bugs": {
-    "url": "https://github.com/Cloud-CNC/vue-3d-viewer/issues"
-  },
-  "homepage": "https://github.com/Cloud-CNC/vue-3d-viewer#readme",
-  "keywords": [
-    "vue",
-    "3d",
-    "3mf",
-    "amf",
-    "obj",
-    "ply",
-    "stl",
-    "gcode",
-    "cloud-cnc"
-  ],
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Cloud-CNC/vue-3d-viewer.git"
-  }
+    "name": "vue-3d-viewer",
+    "version": "1.0.7",
+    "description": "A Vue 3D file viewer via Three.JS and Unified 3D Loader",
+    "author": "Cloud CNC",
+    "scripts": {
+        "build": "vue-cli-service build --target lib --name vue-3d-viewer src/main.js",
+        "coverage": "npm run test:e2e:cli && nyc report --reporter-lcov",
+        "postinstall": "npm run build",
+        "lint": "vue-cli-service lint",
+        "serve": "vue-cli-service serve src/demo/main.js",
+        "test:e2e": "vue-cli-service test:e2e --url http://localhost:8080",
+        "test:e2e:cli": "concurrently --kill-others --success first \"npm:serve\" \"wait-on http-get://localhost:8080 && npm run test:e2e -- --headless\"",
+        "test:e2e:gui": "concurrently --kill-others --success first \"npm:serve\" \"wait-on http-get://localhost:8080 && npm run test:e2e\""
+    },
+    "main": "dist/vue-3d-viewer.common.js",
+    "files": [
+        "dist/*",
+        "src/*"
+    ],
+    "dependencies": {
+        "core-js": "^3.12.1",
+        "observable-fns": "^0.5.1",
+        "threads": "^1.6.4",
+        "three": "^0.128.0",
+        "unified-3d-loader": "^1.1.4",
+        "vue": "^3.0.11"
+    },
+    "devDependencies": {
+        "@babel/preset-env": "^7.14.1",
+        "@cypress/code-coverage": "^3.9.5",
+        "@mdi/font": "^5.9.55",
+        "@vue/cli-plugin-babel": "^4.5.13",
+        "@vue/cli-plugin-e2e-cypress": "^4.5.13",
+        "@vue/cli-plugin-eslint": "^4.5.13",
+        "@vue/cli-service": "^4.5.13",
+        "@vue/compiler-sfc": "^3.0.11",
+        "@vue/test-utils": "^2.0.0-rc.6",
+        "babel-eslint": "^10.1.0",
+        "babel-plugin-istanbul": "^6.0.0",
+        "chai": "^4.3.4",
+        "concurrently": "^6.1.0",
+        "cypress": "^7.3.0",
+        "eslint": "^6.7.2",
+        "eslint-plugin-vue": "^6.2.2",
+        "nyc": "^15.1.0",
+        "postcss": "^8.2.15",
+        "primeflex": "^2.0.0",
+        "primeicons": "^4.1.0",
+        "primevue": "^3.4.0",
+        "raw-loader": "^4.0.2",
+        "sass": "^1.32.12",
+        "sass-loader": "^10.1.1",
+        "threads-webpack-plugin": "^1.0.8",
+        "vue-template-compiler": "^2.6.12",
+        "wait-on": "^5.3.0",
+        "webpack": "^4.44.2"
+    },
+    "bugs": {
+        "url": "https://github.com/Cloud-CNC/vue-3d-viewer/issues"
+    },
+    "homepage": "https://github.com/Cloud-CNC/vue-3d-viewer#readme",
+    "keywords": [
+        "vue",
+        "3d",
+        "3mf",
+        "amf",
+        "obj",
+        "ply",
+        "stl",
+        "gcode",
+        "cloud-cnc"
+    ],
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Cloud-CNC/vue-3d-viewer.git"
+    }
 }
