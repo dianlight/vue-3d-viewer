@@ -23,7 +23,7 @@
     "threads": "^1.6.4",
     "three": "^0.128.0",
     "unified-3d-loader": "^1.1.4",
-    "vue": "^2.6.12"
+    "vue": "^3.0.0"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.14.1",
